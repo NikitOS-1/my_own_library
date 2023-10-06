@@ -7,6 +7,7 @@ function App() {
   const updateId = () => {
     setId(uniqueId);
   };
+
   return (
     <div className="App">
       <h1>{id}</h1>
