@@ -1,6 +1,7 @@
 import { useState } from "react";
 import uniqueId from "./utils/generateId";
 import convertToSlug from "./utils/convertSlug";
+import axiosInstance from "./utils/axios";
 
 function App() {
   const [id, setId] = useState(0);
@@ -15,7 +16,6 @@ function App() {
     setId(0);
     setText("");
   };
-
   return (
     <div className="App">
       <h1>{text}</h1>
