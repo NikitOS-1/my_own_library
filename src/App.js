@@ -11,12 +11,18 @@ function App() {
     setText(convertToSlug(text));
   };
 
+  const reset = () => {
+    setId(0);
+    setText("");
+  };
+
   return (
     <div className="App">
       <h1>{text}</h1>
       <h1>{id}</h1>
-      <input onChange={(e) => setText(e.target.value)} />
+      <input value={text} onChange={(e) => setText(e.target.value)} />
       <button onClick={updateId}>get new unique ID</button>
+      <button onClick={reset}>RESET</button>
     </div>
   );
 }
