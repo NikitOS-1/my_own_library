@@ -18,6 +18,7 @@ function App() {
       fontFamily: "'Montserrat', sans-serif",
     },
   };
+
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={appTheme}>
