@@ -3,7 +3,6 @@ const { default: useLocalStorage } = require("hooks/useLocalStorage");
 const { createContext } = require("react");
 
 const initialSettings = {
-  direction: "ltr",
   theme: THEMES.LIGHT,
   responsiveFontSizes: true,
 };
