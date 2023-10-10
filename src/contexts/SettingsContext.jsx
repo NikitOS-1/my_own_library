@@ -20,7 +20,7 @@ const SettingsProvider = ({ children }) => {
   );
 
   const saveSettings = (updateSettings) => {
-    saveSettings(updateSettings);
+    setSettings(updateSettings);
   };
 
   return (
