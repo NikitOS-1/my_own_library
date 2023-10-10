@@ -9,6 +9,7 @@ const Loadable = (Component) => (props) =>
   );
 
 const HomePage = Loadable(lazy(() => import("./pages/Home/Home")));
+const ErrorPage = Loadable(lazy(() => import("./pages/404")));
 
 const routes = [
   {
@@ -17,6 +18,6 @@ const routes = [
   },
   {
     path: "*",
-    element: <Error />,
+    element: <ErrorPage />,
   },
 ];
