@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 const { useTheme } = require("@emotion/react");
 const { default: FlexBox } = require("components/FlexBox");
 const { H1, Paragraph } = require("components/Typography");

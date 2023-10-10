@@ -10,7 +10,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   const allPages = useRoutes(routes);
 
-  // const appTheme =
+  const appTheme = "";
 
   const toasterOptions = {
     style: {
