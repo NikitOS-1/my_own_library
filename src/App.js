@@ -1,10 +1,17 @@
+import {
+  CssBaseline,
+  StyledEngineProvider,
+  ThemeProvider,
+} from "@mui/material";
 import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <StyledEngineProvider>
+      <ThemeProvider>
+        <CssBaseline />
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
