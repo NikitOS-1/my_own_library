@@ -6,10 +6,6 @@ import React, { useContext } from "react";
 const Home = () => {
   const { settings, saveSettings } = useContext(SettingsContext);
 
-  const handleChangeDirection = (event) => {
-    saveSettings({ ...settings, direction: event.target.value });
-  };
-
   const handleChangeTheme = (event) => {
     saveSettings({ ...settings, theme: event.target.value });
   };
