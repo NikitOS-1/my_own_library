@@ -9,7 +9,9 @@ import {
   success,
   warning,
 } from "./themeColors";
+
 const fontSize = 14;
+
 const baseOptions = {
   direction: "ltr",
   breakpoints: {
@@ -348,4 +350,30 @@ const themesOptions = {
       },
     },
   },
+};
+
+export const appTheme = (config) => {
+  let themeOption = themesOptions[config.theme];
+
+  if (!themeOption) {
+    console.warn(new Error(`The theme ${config.theme} is not valid`));
+    themeOption = themeOption[THEMES.LIGHT];
+  }
+
+  const merged = merge({}, baseOptions, themeOption, {
+    direction: config.direction,
+  });
+
+  let theme = createTheme(merged);
+
+  if (config.responsiveFontSizes) {
+    theme = responsiveFontSizes(theme);
+  }
+
+  theme.shadows[1] = "0px 4px 23px rgba(0, 0, 0, 0.12)";
+  theme.shadows[2] = "0px 0px 21px 1px rgba(0, 0, 0, 0.07)";
+  theme.shadows[3] = "0px 10px 30px rgba(0, 0, 0, 0.1)";
+  theme.shadows[4] = "0px 7px 30px 3px rgba(0, 0, 0, 0.05)";
+
+  return theme;
 };
