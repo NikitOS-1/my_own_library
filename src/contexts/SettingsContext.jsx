@@ -14,7 +14,10 @@ export const SettingsContext = createContext({
 });
 
 const SettingsProvider = ({ children }) => {
-  const { data, storeData } = useLocalStorage("settings", initialSettings);
+  const { data: settings, storeData: setSettings } = useLocalStorage(
+    "settings",
+    initialSettings
+  );
 
   const saveSettings = (updateSettings) => {
     saveSettings(updateSettings);

@@ -7,10 +7,12 @@ import routes from "./routes";
 import { useRoutes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { appTheme } from "theme";
-import { settings } from "nprogress";
+import useSettings from "hooks/useSettings";
 
 function App() {
   const allPages = useRoutes(routes);
+
+  const { settings } = useSettings();
 
   const appsTheme = appTheme({
     theme: settings.theme,
