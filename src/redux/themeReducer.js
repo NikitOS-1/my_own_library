@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { THEMES } from "constants";
+import useLocalStorage from "hooks/useLocalStorage";
 
 const initialState = {
   theme: THEMES.LIGHT,
@@ -9,8 +10,12 @@ const initialState = {
 export const themeSlice = createSlice({
   name: "theme",
   initialState,
-  reducers: {},
+  reducers: {
+    updateSettings: (state, action) => {
+      useLocalStorage("themeSettings", initialState);
+    },
+  },
 });
 
-export const {} = themeSlice.actions;
+export const { updateSettings } = themeSlice.actions;
 export default themeSlice.reducer;
