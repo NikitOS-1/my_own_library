@@ -360,9 +360,7 @@ export const appTheme = (config) => {
     themeOption = themeOption[THEMES.LIGHT];
   }
 
-  const merged = merge({}, baseOptions, themeOption, {
-    direction: config.direction,
-  });
+  const merged = merge({}, baseOptions, themeOption);
 
   let theme = createTheme(merged);
 
