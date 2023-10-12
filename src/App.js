@@ -17,6 +17,7 @@ function App() {
     style: {
       fontWeight: 500,
       fontFamily: "'Montserrat', sans-serif",
+      fontFamily: "'Montserrat', sans-serif",
     },
   };
 
