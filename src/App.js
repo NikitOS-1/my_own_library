@@ -25,6 +25,7 @@ function App() {
       <ThemeProvider theme={appsTheme}>
         <CssBaseline />
         <Toaster toastOptions={toasterOptions} />
+        <Toaster toastOptions={toasterOptions} />
         {allPages}
       </ThemeProvider>
     </StyledEngineProvider>
