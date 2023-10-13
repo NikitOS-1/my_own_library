@@ -5,7 +5,6 @@ import {
 } from "@mui/material";
 import routes from "./routes";
 import { useRoutes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
 import { appTheme } from "theme";
 
 function App() {
