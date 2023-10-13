@@ -1,4 +1,10 @@
+import { useRoutes } from "react-router-dom";
+import routes from "../../routes";
+
 const Main = () => {
-  return <main>Main</main>;
+  const allPages = useRoutes(routes);
+
+  return <main>{allPages}</main>;
 };
+
 export default Main;
