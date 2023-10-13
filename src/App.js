@@ -13,18 +13,10 @@ function App() {
 
   const appsTheme = appTheme({});
 
-  const toasterOptions = {
-    style: {
-      fontWeight: 500,
-      fontFamily: "'Montserrat', sans-serif",
-    },
-  };
-
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={appsTheme}>
         <CssBaseline />
-        <Toaster toastOptions={toasterOptions} />
         {allPages}
       </ThemeProvider>
     </StyledEngineProvider>
