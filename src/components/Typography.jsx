@@ -121,6 +121,7 @@ export const H5 = ({
       textTransformStyle={textTransform}
       ellipsis={ellipsis}
       className={clsx({
+      className={clsx({
         [className || ""]: true,
       })}
       component="h5"
