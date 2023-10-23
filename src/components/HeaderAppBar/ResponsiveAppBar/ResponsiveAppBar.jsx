@@ -12,9 +12,10 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Account", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,24 +40,33 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* icon and name project*/}
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
-              mr: 2,
+              mr: 4,
               display: { xs: "none", md: "flex" },
+              alignItems: "center",
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".2rem",
               color: "inherit",
               textDecoration: "none",
             }}>
-            LOGO
+            <AutoStoriesIcon
+              sx={{
+                display: { xs: "none", md: "flex" },
+                mr: 2,
+                fontSize: 40,
+              }}
+            />
+            My Library
           </Typography>
 
+          {/* pages*/}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -91,24 +101,31 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+
+          {/* mobile - icon and name project*/}
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
+              alignItems: "center",
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}>
-            LOGO
+            <AutoStoriesIcon
+              sx={{ display: { xs: "flex", md: "none" }, mr: 2 }}
+            />
+            My Library
           </Typography>
+
+          {/* mobile - pages*/}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -120,6 +137,7 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
+          {/* user menu */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -153,4 +171,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;
