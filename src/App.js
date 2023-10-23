@@ -14,6 +14,7 @@ import { useRoutes } from "react-router-dom";
 function App() {
   const appsTheme = appTheme({});
   const allPages = useRoutes(routes);
+  const allPages = useRoutes(routes);
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={appsTheme}>
