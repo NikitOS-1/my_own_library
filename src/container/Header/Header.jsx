@@ -1,4 +1,4 @@
-import ResponsiveAppBar from "components/AppBar/ResponsiveAppBar/ResponsiveAppBar";
+import ResponsiveAppBar from "components/HeaderAppBar/ResponsiveAppBar/ResponsiveAppBar";
 
 const Header = () => {
   return (
