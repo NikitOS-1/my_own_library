@@ -355,7 +355,7 @@ export const appTheme = (config) => {
   let themeOption = themesOptions[config.theme];
 
   if (!themeOption) {
-    console.warn(new Error(`The theme ${config.theme} is not valid`));
+    // console.warn(new Error(`The theme ${config.theme} is not valid`));
     themeOption = themesOptions[THEMES.LIGHT];
   } //@ts-ignore
 
