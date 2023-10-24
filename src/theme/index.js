@@ -12,7 +12,6 @@ import {
 
 const fontSize = 14;
 const baseOptions = {
-  direction: "ltr",
   breakpoints: {
     values: {
       xs: 0,
