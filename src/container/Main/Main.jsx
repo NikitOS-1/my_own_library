@@ -1,12 +1,15 @@
 import { useRoutes } from "react-router-dom";
 import routes from "../../routes";
-import { useDispatch, useSelector } from "react-redux";
-import { inc } from "redux/someReducer";
+import { Box, Container } from "@mui/material";
 
 const Main = () => {
   const allPages = useRoutes(routes);
 
-  return <main>{allPages}</main>;
+  return (
+    <main>
+      <Container maxWidth="lg">{allPages}</Container>
+    </main>
+  );
 };
 
 export default Main;
