@@ -1,6 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import routes from "../../routes";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 
 const Main = () => {
   const allPages = useRoutes(routes);
