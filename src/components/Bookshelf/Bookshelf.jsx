@@ -1,5 +1,6 @@
 import { Container, Grid } from "@mui/material";
 import React, { useState } from "react";
+import Book from "./Book";
 
 const booksData = [
   { title: "Книга 1", author: "Автор 1" },
@@ -15,31 +16,13 @@ const Bookshelf = () => {
   const [books, setBooks] = useState(booksData);
 
   return (
-    <div>
-      Bookshelf
-      <Container>
-        <Grid container spacing={1}>
-          {books.map((book, index) => (
-            <Grid item key={index} xs={1}>
-              <div
-                style={{
-                  border: "1px solid black",
-                  width: "40px",
-                  height: "150px",
-                  writingMode: "vertical-rl",
-                  textOrientation: "mixed",
-                  whiteSpace: "nowrap",
-                  fontSize: "1.2em",
-                  textAlign: "center",
-                  margin: "0 auto",
-                }}>
-                {book.title}
-              </div>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </div>
+    <Container>
+      <Grid container spacing={1}>
+        {books.map((book) => (
+          <Book author={book.author} title={book.title} />
+        ))}
+      </Grid>
+    </Container>
   );
 };
 export default Bookshelf;
