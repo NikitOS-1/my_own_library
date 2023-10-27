@@ -9,7 +9,6 @@ const Home = () => {
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
-        flexDirection: "column",
       }}>
       <Quote />
       <Bookshelf />;
